@@ -4,10 +4,16 @@
 
 ```
 # Build
-$ dpkg-deb --build ttcopy_2.2.0-1
+$ cd ttcopy-2.2.0-1
+$ debuild -us -uc --lintian-opts --profile debian
+
+# Upload to Launchpad
+$ cd ..
+$ debsign -k <Secret Key> ttcopy_2.2.0-1_amd64.changes
+$ dput ppa:greymd/ttcopy ttcopy_2.2.0-1_amd64.changes
 
 # Install
-$ dpkg -i ttcopy_2.2.0-1.deb
+$ dpkg -i ttcopy-2.2.0-1.deb
 ```
 
 ## With APT
