@@ -1,0 +1,19 @@
+Source: ttcopy
+Version: 2.2.0
+Section: utils
+Priority: optional
+Maintainer: Yasuhiro Yamada <greengregson@gmail.com>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Homepage: https://github.com/greymd/ttcopy
+Vcs-Git: https://github.com/greymd/ttcopy.git
+Vcs-Browser: https://github.com/greymd/ttcopy
+
+Package: ttcopy
+Version: 2.2.0
+Section: contrib/utils
+Architecture: all
+Maintainer: Yasuhiro Yamada <greengregson@gmail.com>
+Description: <Provide copying and pasting within multiple hosts through the Web.>
+ <Set up ttcopy on the hosts which you want to make share same data. You are NOT required to register them on any services. The data you copied can be pasted within the hosts having same ID and Password.>
+

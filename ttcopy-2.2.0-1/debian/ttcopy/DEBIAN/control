@@ -1,8 +1,10 @@
 Package: ttcopy
-Version: 2.2.0
-Section: utils
+Version: 2.2.0-1
 Architecture: all
-Maintainer: YAMADA, Yasuhiro <greengregson@gmail.com>, MUTA, Masafumi <mecab@misosi.ru>
+Maintainer: Yasuhiro Yamada <greengregson@gmail.com>
+Installed-Size: 9
+Section: contrib/utils
+Priority: optional
+Homepage: https://github.com/greymd/ttcopy
 Description: <Provide copying and pasting within multiple hosts through the Web.>
  <Set up ttcopy on the hosts which you want to make share same data. You are NOT required to register them on any services. The data you copied can be pasted within the hosts having same ID and Password.>
-
