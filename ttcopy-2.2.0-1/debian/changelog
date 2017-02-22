@@ -1,5 +1,5 @@
-ttcopy (2.2.0-1) stable; urgency=low
+ttcopy (2.2.0-1) yakkety; urgency=low
 
   * Please refer to https://github.com/greymd/ttcopy/releases
 
- -- Yasuhiro Yamada <greengregson@gmail.com> Wed, 22 Feb 2017 06:13:07 +0000
+ -- Yasuhiro Yamada (greymd) <greengregson@gmail.com> Wed, 22 Feb 2017 06:13:07 +0000
