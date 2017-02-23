@@ -20,5 +20,7 @@ $ dput ppa:greymd/ttcopy ttcopy_2.2.0-1_amd64.changes
 ## With APT
 
 ```
-TBD
+$ sudo add-apt-repository ppa:greymd/ttcopy
+$ sudo apt update
+$ sudo apt install ttcopy
 ```

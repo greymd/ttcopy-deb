@@ -1,3 +1,9 @@
+ttcopy (2.2.0-ubuntu2) xenial; urgency=medium
+
+  * Please refer to https://github.com/greymd/ttcopy/releases
+
+ -- Yasuhiro Yamada (greymd) <greengregson@gmail.com>  Thu, 23 Feb 2017 14:08:41 +0000
+
 ttcopy (2.2.0-1ubuntu1) xenial; urgency=medium
 
   * Please refer to https://github.com/greymd/ttcopy/releases
