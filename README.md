@@ -67,6 +67,12 @@ $ echo ttcopy_${VERSION}*.tar.gz | perl -nle '$dot_orig = $_; $dot_orig =~ s/\.t
 $ git add *.orig.tar.gz ttcopy-template
 # => After that, git-commit and git-push
 
+# --------------------
+# Cleaning
+# --------------------
+# Delete all the untracked files.
+$ git ls-files --others --directory | xargs rm -rf
+
 ```
 
 ## Installation with APT
