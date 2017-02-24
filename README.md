@@ -4,9 +4,9 @@
 
 ```
 # Build
-$ cd ttcopy-2.2.0-1
+$ cd ttcopy-<VERSION>
 
-$ debuild -us -uc --lintian-opts --profile debian
+$ debuild -us -uc
 # => Check result
 
 $ debuild -S -sa
@@ -14,13 +14,14 @@ $ debuild -S -sa
 
 # Upload to Launchpad
 $ cd ..
-$ dput ppa:greymd/ttcopy ttcopy_2.2.0-1_amd64.changes
+$ dput ppa:ttcopy/ppa ttcopy-<VERSION>.changes
 ```
 
 ## With APT
 
 ```
-$ sudo add-apt-repository ppa:greymd/ttcopy
+$ sudo apt-get -y install software-properties-common # if necessary
+$ sudo add-apt-repository ppa:ttcopy/ppa
 $ sudo apt update
 $ sudo apt install ttcopy
 ```
