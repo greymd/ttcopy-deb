@@ -1,0 +1,6 @@
+ttcopy (###VERSION###-###BUILD_VERSION######DISTRO_VERSION###) ###DISTRO_CODENAME### ; urgency=medium
+
+  * Support ###DISTRO_VERSION###(###DISTRO_CODENAME###)
+
+ -- ###EDITOR###  ###EDIT_DATE###
+
