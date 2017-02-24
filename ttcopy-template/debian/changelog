@@ -1,4 +1,10 @@
-ttcopy (2.2.0-0) devel; urgency=low
+ttcopy (2.2.0-1) devel; urgency=medium
+
+  * Add curl and openssl as dependencies.
+
+ -- Yamada, Yasuhiro <greengregson@gmail.com>  Fri, 24 Feb 2017 13:27:52 +0000
+
+ttcopy (2.2.0) devel; urgency=low
 
   * Initial package for ttcopy.
   * Regarding the application's release history, refer to https://github.com/greymd/ttcopy/releases
