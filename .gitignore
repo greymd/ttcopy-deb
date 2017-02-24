@@ -5,3 +5,5 @@
 *.build
 *.changes
 *.ppa.upload
+*ttcopy-*
+!ttcopy-template
