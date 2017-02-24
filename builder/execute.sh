@@ -2,21 +2,18 @@
 
 THIS_DIR=$(cd "$(dirname "${BASH_SOURCE[0]:-${(%):-%N}}")"; pwd)
 printf "VERSION (i.e 1.2.3): "
-read VERSION
+read VERSION < /dev/tty
 
 printf "BUILD_VERSION (i.e 1): "
-read BUILD_VERSION
+read BUILD_VERSION < /dev/tty
 
 printf "EDITOR (i.e Green Gregson <green@example.com>): "
-read EDITOR
-
-printf "GPG password: "
-read PASSWORD
+read EDITOR < /dev/tty
 
 TMPDIR=${THIS_DIR}/tmp
 mkdir -p $TMPDIR
 EDIT_DATE=$(date --rfc-2822)
-echo $TMPDIR
+echo $THIS_DIR
 
 cd "$THIS_DIR"
 while read DISTRO_VERSION DISTRO_CODENAME ; do
@@ -32,19 +29,24 @@ while read DISTRO_VERSION DISTRO_CODENAME ; do
     cat $TMPDIR/changelog.append ttcopy-template/debian/changelog > $TMPDIR/changelog.new
     echo "Following log will be added."
     echo "-----------------------------"
-    cat $TMPDIR/changelog.new
+    cat $TMPDIR/changelog.append
     echo "-----------------------------"
-    printf "Is it ok? [ENTER]: "
-    read ok
-    exit 0
 
     mv $TMPDIR/changelog.new ttcopy-template/debian/changelog
 
     cp -rL ttcopy-template ttcopy-${VERSION}
     cd ttcopy-${VERSION}
-    yes | debuild -us -uc
-    printf "y\n$PASSWORD\n$PASSWORD\n" | debuild -S -sd
+    debuild -us -uc < /dev/tty
+    if [ $? -ne 0 ]; then
+        echo "abort" 1>&2 && exit 1
+    fi
+    debuild -S -sd < /dev/tty
+    cd ..
+    rm -rf ttcopy-${VERSION}
 
     cd "$THIS_DIR"
 done < $THIS_DIR/support-versions
+
+cd $THIS_DIR/../
+ls | grep source.changes | sed 's/^/dput ppa:ttcopy /'
 
