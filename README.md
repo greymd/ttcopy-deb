@@ -19,7 +19,7 @@ $ dch -i
 
 # Fetch ttcopy which has given VERSION
 $ cd ../ttcopy.git
-$ git checkout $VERSION
+$ git checkout "v$VERSION"
 $ cd ../
 
 # --------------------
@@ -27,7 +27,7 @@ $ cd ../
 # --------------------
 
 # Create directory for build.
-$ cd -rL ttcopy-template ttcopy-${VERSION}
+$ cp -rL ttcopy-template ttcopy-${VERSION}
 $ cd ttcopy-${VERSION}
 
 # Dry build
@@ -46,10 +46,10 @@ $ debuild -S -sd
 $ cd ..
 
 # For test
-$ dput ppa:ttcopy/nightly ttcopy_${VERSION}*.changes
+$ dput ppa:ttcopy/nightly ttcopy_${VERSION}*_source.changes
 
 # For production
-$ dput ppa:ttcopy/ppa ttcopy_${VERSION}*.changes
+$ dput ppa:ttcopy/ppa ttcopy_${VERSION}*_source.changes
 
 ```
 

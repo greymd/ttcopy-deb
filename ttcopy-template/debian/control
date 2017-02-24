@@ -15,3 +15,4 @@ Section: contrib/utils
 Architecture: all
 Maintainer: Yamada, Yasuhiro <greengregson@gmail.com>
 Description: <Provide copying and pasting within multiple hosts through the Web.>
+ <Please prepare ID and Password as you like. The data you copied can be pasted within the hosts having same ID and Password.>
