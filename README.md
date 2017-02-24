@@ -97,20 +97,20 @@ $ sudo apt remove ttcopy
 
 ## Versioning
 Basically, please refer to https://help.launchpad.net/Packaging/PPA/BuildingASourcePackage .
-ttcopy does not require any compile, therefore suffix like `ubuntu<version num>` is not necessary.
+ttcopy does not require any compile, therefore suffix like `ubuntu<version num>` is not necessary. (@greymd thinks ... so, but it's not confident.)
 
 Package version follows this rule.
 
 ```
-ttcopy-<ttcopy version>-<build version><support ubuntu version>
+ttcopy-<ttcopy version>-<build version>
 ```
 
 For example
 
 ```
-ttcopy-2.0.0-3ubuntu14.14
+ttcopy-2.0.0-3
 ```
 
 `<build version>` increments if same `<ttcopy version>` is built in multiple times.
-`-1` is used if there is no retried build.
+`-0` is used if there is no retried build.
 
