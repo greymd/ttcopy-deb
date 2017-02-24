@@ -61,7 +61,7 @@ $ dput ppa:ttcopy/ppa ttcopy_${VERSION}*_source.changes
 # Git
 # --------------------
 # change .tar.gz to .orig.tar.gz
-$ echo ttcopy_${VERSION}*.tar.gz | perl -nle '$dot_orig = $_; $dot_orig =~ s/\.tar/.orig.tar/; print "mv $_ $dot_orig"' | sh
+$ echo ttcopy_${VERSION}*.tar.gz | xargs -n 1 | grep -v orig | perl -nle '$dot_orig = $_; $dot_orig =~ s/\.tar/.orig.tar/; print "mv $_ $dot_orig"' | sh
 
 # Add orig.tar.gz file to the repository.
 $ git add *.orig.tar.gz ttcopy-template
