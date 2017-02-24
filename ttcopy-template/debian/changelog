@@ -1,3 +1,9 @@
+ttcopy (2.2.0-2) devel; urgency=medium
+
+  * Add curl and openssl as dependencies of the package.
+
+ -- Yamada, Yasuhiro <greengregson@gmail.com>  Fri, 24 Feb 2017 13:46:46 +0000
+
 ttcopy (2.2.0-1) devel; urgency=medium
 
   * Add curl and openssl as dependencies.
