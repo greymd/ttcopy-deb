@@ -18,9 +18,8 @@ $ dch -i
 # Please refer to "Versioning" section in this file.
 
 # Fetch ttcopy which has given VERSION
-$ cd ../ttcopy.git
-$ git checkout "v$VERSION"
-$ cd ../
+$ ( cd ../ttcopy.git; git checkout "v$VERSION" )
+# => HEAD is now at XXXXXXX... Bump version to X.X.X
 
 # --------------------
 # Build

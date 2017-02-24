@@ -1,3 +1,9 @@
+ttcopy (2.2.0-3) xenial; urgency=medium
+
+  * Production release.
+
+ -- Yamada, Yasuhiro <greengregson@gmail.com>  Fri, 24 Feb 2017 05:38:00 +0000
+
 ttcopy (2.2.0-2) xenial; urgency=low
 
   * Refactored version.
