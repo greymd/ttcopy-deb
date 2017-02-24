@@ -3,7 +3,7 @@ Version: 2.2.0
 Section: utils
 Priority: optional
 Maintainer: Yamada, Yasuhiro <greengregson@gmail.com>
-Build-Depends: debhelper (>=9)
+Build-Depends: debhelper (>=9), openssl, curl
 Standards-Version: 3.9.7
 Homepage: https://github.com/greymd/ttcopy
 Vcs-Git: https://github.com/greymd/ttcopy.git
@@ -12,6 +12,7 @@ Vcs-Browser: https://github.com/greymd/ttcopy
 Package: ttcopy
 Version: 2.2.0
 Section: contrib/utils
+Depends: openss, curl
 Architecture: all
 Maintainer: Yamada, Yasuhiro <greengregson@gmail.com>
 Description: <Provide copying and pasting within multiple hosts through the Web.>
