@@ -102,8 +102,15 @@ ttcopy does not require any compile, therefore suffix like `ubuntu<version num>`
 Package version follows this rule.
 
 ```
-ttcopy-<ttcopy version>-<build version>
+ttcopy-<ttcopy version>-<build version><support ubuntu version>
+```
+
+For example
+
+```
+ttcopy-2.0.0-3ubuntu14.14
 ```
 
 `<build version>` increments if same `<ttcopy version>` is built in multiple times.
 `-1` is used if there is no retried build.
+
