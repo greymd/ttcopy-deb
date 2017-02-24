@@ -13,7 +13,7 @@ Use Debian-based Linux like Ubuntu.
 $ VERSION="X.X.X"
 $ git clone --recursive https://github.com/greymd/dpkg-ttcopy.git
 $ cd dpkg-ttcopy/ttcopy-template
-$ dch -i
+$ dch
 # => Increment versioning and put descriptions of the package build.
 # Please refer to "Versioning" section in this file.
 
@@ -21,6 +21,7 @@ $ dch -i
 $ ( cd ../ttcopy.git; git checkout "v$VERSION" )
 # => HEAD is now at XXXXXXX... Bump version to X.X.X
 
+$ cd ../
 # --------------------
 # Build
 # --------------------
