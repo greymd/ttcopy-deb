@@ -40,16 +40,32 @@ $ debuild -S -sd
 # => Enter passphrases of allowed GPG passphrase two times.
 # If you want to overwrite previous version, `debuild -S -sa`
 
+$ cd ..
+
+# --------------------
+# Install on local (Optional)
+# --------------------
+$ dpkg -i ttcopy_${VERSION}*.deb
+
 # --------------------
 # Upload to Launchpad
 # --------------------
-$ cd ..
 
 # For test
 $ dput ppa:ttcopy/nightly ttcopy_${VERSION}*_source.changes
 
 # For production
 $ dput ppa:ttcopy/ppa ttcopy_${VERSION}*_source.changes
+
+# --------------------
+# Git
+# --------------------
+# change .tar.gz to .orig.tar.gz
+$ echo ttcopy_${VERSION}*.tar.gz | perl -nle '$dot_orig = $_; $dot_orig =~ s/\.tar/.orig.tar/; print "mv $_ $dot_orig"' | sh
+
+# Add orig.tar.gz file to the repository.
+$ git add *.orig.tar.gz ttcopy-template
+# => After that, git-commit and git-push
 
 ```
 
