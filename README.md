@@ -11,8 +11,8 @@ Use Debian-based Linux like Ubuntu.
 
 # Fill in the ttcp version number which you want to build.
 $ VERSION="X.X.X"
-$ git clone --recursive https://github.com/greymd/dpkg-ttcopy.git
-$ cd dpkg-ttcopy/ttcopy-template
+$ git clone --recursive https://github.com/greymd/ttcopy-deb.git
+$ cd ttcopy-deb/ttcopy-template
 $ dch
 # => Increment versioning and put descriptions of the package build.
 # Please refer to "Versioning" section in this file.
