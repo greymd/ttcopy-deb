@@ -80,7 +80,7 @@ $ git add ttcopy-template
 ## Installation with APT
 
 ```sh
-$ sudo apt-get -y install software-properties-common # if necessary
+$ sudo apt-get -y install software-properties-common python-software-properties # if necessary
 
 # For test
 $ sudo add-apt-repository ppa:ttcopy/nightly
@@ -88,11 +88,11 @@ $ sudo add-apt-repository ppa:ttcopy/nightly
 # For production
 $ sudo add-apt-repository ppa:ttcopy/ppa
 
-$ sudo apt update
-$ sudo apt install ttcopy
+$ sudo apt-get update
+$ sudo apt-get install ttcopy
 
 # Uninstall
-$ sudo apt remove ttcopy
+$ sudo apt-get remove ttcopy
 ```
 
 ## Versioning
