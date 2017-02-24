@@ -15,7 +15,7 @@ $ git clone --recursive https://github.com/greymd/dpkg-ttcopy.git
 $ cd dpkg-ttcopy/ttcopy-template
 $ dch -i
 # => Increment versioning and put descriptions of the package build.
-# Please refer to :Versioning section in this file.
+# Please refer to "Versioning" section in this file.
 
 # Fetch ttcopy which has given VERSION
 $ cd ../ttcopy.git
@@ -33,6 +33,7 @@ $ cd ttcopy-${VERSION}
 # Dry build
 $ debuild -us -uc
 # => Check result.
+# Answer "yes" is you asked something.
 # If there is any errors like "E:error message", please solve it.
 
 # Build
@@ -45,7 +46,12 @@ $ cd ..
 # --------------------
 # Install on local (Optional)
 # --------------------
+
+# Try installing
 $ dpkg -i ttcopy_${VERSION}*.deb
+
+# Remove
+$ dpkg --remove ttcopy
 
 # --------------------
 # Upload to Launchpad
@@ -58,20 +64,16 @@ $ dput ppa:ttcopy/nightly ttcopy_${VERSION}*_source.changes
 $ dput ppa:ttcopy/ppa ttcopy_${VERSION}*_source.changes
 
 # --------------------
-# Git
-# --------------------
-# change .tar.gz to .orig.tar.gz
-$ echo ttcopy_${VERSION}*.tar.gz | xargs -n 1 | grep -v orig | perl -nle '$dot_orig = $_; $dot_orig =~ s/\.tar/.orig.tar/; print "mv $_ $dot_orig"' | sh
-
-# Add orig.tar.gz file to the repository.
-$ git add *.orig.tar.gz ttcopy-template
-# => After that, git-commit and git-push
-
-# --------------------
 # Cleaning
 # --------------------
 # Delete all the untracked files.
 $ git ls-files --others --directory | xargs rm -rf
+
+# --------------------
+# Git
+# --------------------
+$ git add ttcopy-template
+# => After that, git-commit and git-push
 
 ```
 
