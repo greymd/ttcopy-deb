@@ -2,5 +2,5 @@ ttcopy (###VERSION###-###BUILD_VERSION######DISTRO_VERSION###) ###DISTRO_CODENAM
 
   * Support ###DISTRO_VERSION###(###DISTRO_CODENAME###)
 
- -- ###EDITOR###  ###EDIT_DATE###
+ -- ###EDITOR### ###EDIT_DATE###
 
