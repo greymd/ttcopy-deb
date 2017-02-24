@@ -2,9 +2,9 @@
 # Ref: https://www.debian.org/doc/manuals/maint-guide/modify.ja.html
 BINDIR=$(DESTDIR)/usr/bin
 LIBDIR=$(DESTDIR)/usr/lib
-TTCOPY_DEST=ttcopy
-TTPASTE_DEST=ttpaste
-TTCP_DEST=ttcp
+TTCOPY_DEST=bin/ttcopy
+TTPASTE_DEST=bin/ttpaste
+TTCP_DEST=lib/ttcp
 INSTALL?=/usr/bin/install
 RM?=/bin/rm -f
 
