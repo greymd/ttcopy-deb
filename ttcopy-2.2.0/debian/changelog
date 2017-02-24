@@ -1,0 +1,7 @@
+ttcopy (2.2.0-1) xenial; urgency=low
+
+  * Initial package for ttcopy.
+  * Regarding application release history,
+    refer to https://github.com/greymd/ttcopy/releases
+
+ -- Yamada, Yasuhiro <greengregson@gmail.com> Wed, 22 Feb 2017 06:13:07 +0000

@@ -1,6 +1,7 @@
 *.deb
 *.dsc
 *.tar.gz
+! *.orig.tar.gz
 *.build
 *.changes
 *.ppa.upload
