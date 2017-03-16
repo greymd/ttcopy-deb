@@ -1,3 +1,12 @@
+ttcopy (2.2.2-1) devel; urgency=medium
+
+  * Detail is here: https://github.com/greymd/ttcopy/releases
+  * Defined the versions required to the dependencies clearly. (#47)
+  * Improved the test cases. (#46, #47)
+  * Bugfix: ttcopy does not work with specific conditions (#45).
+
+ -- Yamada, Yasuhiro <greengregson@gmail.com>  Thu, 16 Mar 2017 01:52:26 +0000
+
 ttcopy (2.2.0-2) devel; urgency=medium
 
   * Add curl and openssl as dependencies of the package.
